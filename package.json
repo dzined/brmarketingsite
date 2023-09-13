@@ -1,0 +1,28 @@
+{
+  "name": "brmarketingsite",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.9",
+    "@mui/styled-engine-sc": "^5.14.9",
+    "anime": "^0.1.2",
+    "animejs": "^3.2.1",
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.4.19",
+    "gsap": "^3.12.2",
+    "next": "13.4.19",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-tsparticles": "^2.12.2",
+    "styled-components": "^5.3.11",
+    "tsparticles": "^2.12.0"
+  }
+}
