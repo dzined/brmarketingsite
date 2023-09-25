@@ -75,6 +75,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'stolzl', Helvetica, sans-serif;
 }
 
 html,
@@ -82,8 +83,9 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   font-weight: 200;
-  font-family: "stolzl", Helvetica, sans-serif;
+
 }
+
 
 strong {
   font-weight: 400;
@@ -133,3 +135,7 @@ a {
     background: linear-gradient(transparent 95%, #000 95%);
   }
 }
+
+
+
+/* App.css (or your custom CSS file) */

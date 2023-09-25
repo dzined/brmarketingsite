@@ -1,0 +1,6 @@
+.strapline {
+  background-image: linear-gradient(to right, #0CDEFF, #9308FF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

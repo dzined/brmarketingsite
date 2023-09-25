@@ -1,0 +1,20 @@
+.introPanel {
+  padding: 8rem;
+  background-color: #fff
+}
+
+.introPanel h2 {
+  color: #000;
+  font-weight: 600;
+  font-size: 40px;
+  ;
+}
+
+.maxWrap {
+  max-width: 500px;
+}
+
+.introPanel>p {
+  color: #000;
+  font-size: 20px;
+}

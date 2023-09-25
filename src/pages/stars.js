@@ -2,11 +2,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import Hero from '@/components/Hero'
+import Hero from '@/components/Home/Hero'
 import Typography from '@mui/material/Typography'
 import { Button,Box } from '@mui/material'
 import Header from '@/components/Layouts/Header'
-import Anime from '@/components/Anime'
+import Anime from '@/components/Home/Anime'
 
 const inter = Inter({ subsets: ['latin'] })
 

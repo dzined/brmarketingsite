@@ -1,0 +1,5 @@
+.circle {
+  transition: transform 2.5s ease;
+  transform-origin: center;
+
+}
