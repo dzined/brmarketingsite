@@ -3,7 +3,8 @@ import Header from './Header'
 import Footer from './Footer'
 import { Box } from '@mui/material'
 import Circle from '@/assets/icons/Circle'
-import styles from './Wrapper.module.css'
+import styles from './GeneralWrapper.module.css'
+
 export default function Wrapper({children}) {
   const layersTop = useRef(null);
   const circleShape = useRef(null);
