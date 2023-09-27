@@ -9,7 +9,7 @@ export default function Rings() {
 console.log("asssd")
     animate(
       '.rings',
-      { opacity: [0,1],top: ['50%','50%'],translateY: ['-50%','-50%'],scale: [1,2]},
+      { opacity: [0,0.2],top: ['50%','50%'],translateY: ['-50%','-50%'],scale: [1,2]},
       {duration:3},
       {easing: spring()},
     )

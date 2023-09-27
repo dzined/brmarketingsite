@@ -6,7 +6,7 @@ import { Box } from '@mui/material'
 export default function PetriDish() {
 useEffect(() => {
 
-  inView('#sectionProtect', (info) => {
+  inView('#sectionTime3', (info) => {
   const sequence=[
       [
           '.outer',
@@ -31,7 +31,7 @@ useEffect(() => {
 })
 },[])
   return (
-    <Box sx={{position:'relative',width:400,height:400}}>
+    <Box sx={{position:'relative',width:{xs:300,sm:400},height:{xs:300,sm:400}}}>
 
 
         <Box className="outer" sx={{position:'absolute',top:0,left:0,width:'90%',height:'90%',background:'#242158',borderRadius:'50%'}} />

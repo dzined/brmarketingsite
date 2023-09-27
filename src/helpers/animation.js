@@ -11,11 +11,11 @@ export const fadeInStagger=(section,elementName,duration=1,easing="spring")=>{
       {duration:duration},
       {easing:easing=='spring' ?  spring() : null},
     )
-    return (leaveInfo) => {
-      animate(elementName,
-      { opacity: 0},
-      )
-    }
+    // return (leaveInfo) => {
+    //   animate(elementName,
+    //   { opacity: 0},
+    //   )
+    // }
   })
 }
 
@@ -46,11 +46,11 @@ export const fadeIn=(elementName,duration=1)=>{
         // offset: [0, 0.25, 0.75]
       }
     )
-    return (leaveInfo) => {
-      animate(box,
-      { opacity: 0},
-      )
-    }
+    // return (leaveInfo) => {
+    //   animate(box,
+    //   { opacity: 0},
+    //   )
+    // }
   })
 }
 export const fadeInUp=(elementName,duration=1)=>{

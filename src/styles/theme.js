@@ -38,6 +38,7 @@ let theme = createTheme({
 			icon:'#00a99d',
 			main: '#00567b',
 		navy:'#1b1b33',
+		navyDark:'#080e2d',
 			mainHover: '#054561',
 			divider: '#8da8b4',
 			field: '#8da8b4',

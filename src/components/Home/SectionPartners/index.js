@@ -1,31 +1,55 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography,useTheme,useMediaQuery } from '@mui/material';
 import Link from 'next/link';
-import { useTheme } from '@mui/material';
-import { useEffect } from 'react';
+import {  } from 'react';
 import {fadeIn, fadeInStagger} from '@/helpers/animation'
 import Rings from '@/components/Widgets/Rings';
+import { animate,inView,spring,stagger } from 'motion'
+
 export default function SectionPartners() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   useEffect(() => {
-    fadeInStagger('missionText','.partnerBox',3)
-    fadeIn('missionText',3,3)
+
+        inView('#missionText', (info) => {
+          // {isMobile ? animate('.time2',{opacity:[0,1],y:[-100,-1]},{duration:3,ease:'linear'}):
+          animate('#missionText',{opacity:[0,1]},{duration:2,ease:'linear'})
+          // }
+        })
+
+        return inView('#partnerSection', (info) => {
+          animate(
+            '.partnerBox',
+            { opacity: [0,1], y: [-20,0]},
+            { delay: stagger(0.10) },
+            {duration:4},
+            {easing: spring()},
+          )
+          // return (leaveInfo) => {
+          //   animate(elementName,
+          //   { opacity: 0},
+          //   )
+          // }
+        })
+
+
   }, [])
   //asf
 const GreyBox=({children})=> {
-  return(<Stack alignItems="center" justifyContent="center" sx={{background:theme.palette.primary.superLight,width:'100%',minHeight:240,height:'100%',borderRadius:5,p:7}}>{children}</Stack>)
+  return(<Stack alignItems="center" justifyContent="center" sx={{background:theme.palette.primary.superLight,width:'100%',minHeight:{xs:100,sm:240},height:'100%',borderRadius:5,p:{xs:4,sm:7}}}>{children}</Stack>)
 }
 
 
-  const theme=useTheme();
   return (
     <Box id="partnerSection" sx={{position:'relative'}} className="whiteBg" >
       <Rings />
       <Box className="curvedSectionWhiteReverse" />
 
-        <Box sx={{p:{xs:10,sm:40}}}>
+        <Box sx={{p:{xs:5,sm:10}}}>
         <Box sx={{width:'100%',px:{xs:0,sm:6}}}>
-        <Grid container spacing={8}>
+        <Grid container spacing={{xs:2,sm:8}}>
 
         <Grid xs={12} sm={4} md={4} display="flex" flexDirection="column" justifyContent="flex-start" alignItems="flex-start" >
           <Stack direction="column" justifyContent="center" alignItems="space-between" spacing={4} sx={{height:'100%'}} className="partnerBox" >
@@ -37,14 +61,14 @@ const GreyBox=({children})=> {
             </Link>
             </Stack>
         </Grid>
-        <Grid xs={12} sm={4} md={4} display="flex" justifyContent="center" alignItems="center">
+        <Grid xs={6} sm={4} md={4} display="flex" justifyContent="center" alignItems="center">
         <Box  className="partnerBox" >
            <GreyBox>
            <Box sx={{width:'100%'}} component="img" src="/partners/analyser-bk.png" alt="Analyser" />
            </GreyBox>
            </Box>
         </Grid>
-        <Grid xs={12} sm={4} md={4} display="flex" justifyContent="center" alignItems="center">
+        <Grid xs={6} sm={4} md={4} display="flex" justifyContent="center" alignItems="center">
         <Box  className="partnerBox" >
        <GreyBox>
         <Box  sx={{width:'100%'}}  component="img" src="/partners/ev-pro-bk.png" alt="Ev Pro" />
@@ -54,16 +78,16 @@ const GreyBox=({children})=> {
 
         </Grid>
 
-        <Grid container spacing={8} sx={{mt:2}}>
+        <Grid container spacing={{xs:2,sm:8}} sx={{mt:2}}>
 
-        <Grid className="partnerBox" xs={12} sm={4} md={4} display="flex" justifyContent="center" alignItems="center">
+        <Grid className="partnerBox" xs={6} sm={4} md={4} display="flex" justifyContent="center" alignItems="center">
         <Box  className="partnerBox" >
         <GreyBox>
           <Box  sx={{width:'100%'}} component="img" src="/partners/fintegrate-bk.png" alt="Fintegrate" />
           </GreyBox>
           </Box>
         </Grid>
-        <Grid xs={12} sm={4} md={4} display="flex" justifyContent="center" alignItems="center">
+        <Grid xs={6} sm={4} md={4} display="flex" justifyContent="center" alignItems="center">
         <Box  className="partnerBox" >
         <GreyBox>
 
@@ -71,7 +95,7 @@ const GreyBox=({children})=> {
           </GreyBox>
           </Box>
         </Grid>
-        <Grid xs={12} sm={4} md={4} display="flex" justifyContent="center" alignItems="center">
+        <Grid xs={6} sm={4} md={4} display="flex" justifyContent="center" alignItems="center">
         <Box  className="partnerBox" >
         <GreyBox>
           <Box  sx={{width:'100%'}} component="img" src="/partners/money-alive-bk.png" alt="Money Alive" />
@@ -81,8 +105,8 @@ const GreyBox=({children})=> {
 
         </Grid>
         </Box>
-        <Box id="missionText" sx={{width:'100%',p:{xs:3,sm:15},py:5}}>
-        <Typography variant="body1" sx={{pt:3,lineHeight:1.2,fontWeight:400,textAlign:'center',fontSize:{xs:20,sm:26,md:26}}}>We&apos;re on a mission to create a healthy new ecosystem for forward-thinking financial intermediaries </Typography>
+        <Box id="missionText" sx={{width:'100%',p:{xs:2,sm:5},py:5}}>
+        <Typography variant="body1" sx={{pt:3,lineHeight:1.2,fontWeight:400,textAlign:'center',fontSize:{xs:15,sm:26,md:26}}}>We&apos;re on a mission to create a healthy new ecosystem for forward-thinking financial intermediaries </Typography>
         </Box>
         </Box>
     </Box>

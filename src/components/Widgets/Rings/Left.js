@@ -13,14 +13,14 @@ console.log("asssd")
       {duration:3},
       {easing: spring()},
     )
-    return (leaveInfo) => {
-      animate(
-        '.rings',
-        { opacity: [1,0]},
-        {duration:3},
-        {easing: spring()},
-      )
-    }
+    // return (leaveInfo) => {
+    //   animate(
+    //     '.rings',
+    //     { opacity: [1,0]},
+    //     {duration:3},
+    //     {easing: spring()},
+    //   )
+    // }
   })
   },[])
 

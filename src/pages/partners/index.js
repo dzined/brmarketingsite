@@ -36,7 +36,7 @@ export default function Partners() {
         {duration:3},
       ]
     ]
-    timeline(sequence, { repeat:0})
+    timeline(sequence)
   })
 
 
@@ -166,7 +166,8 @@ Money Alive’s products are used by financial advisers, pension schemes, pensio
 
   const theme=useTheme();
   return (
-    <GeneralWrapper><Box sx={{height:80,width:'100%'}}></Box>
+    <GeneralWrapper>
+      <Box sx={{height:80,width:'100%'}}></Box>
     <RingsLeft />
     <Box >
       <Stack  alignItems={"center"} sx={{py:8,width:'100%',backgroundColor:theme.palette.primary.superLight, }} >

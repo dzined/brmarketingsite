@@ -35,7 +35,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-    <main>
+    {/* <main> */}
 
       <Box sx={{maxHeight:600,backgroundColor:'red',overflow:'hidden'}}>
       {/* <Box ref={heroRef}> */}
@@ -46,15 +46,19 @@ export default function Home() {
       {/* <SectionPin  heroHeight={heroHeight} /> */}
       {/* <MessagingAnim />
        */}
-    <Box className="curvedSectionBlueTop paddedXl"  />
-     <SectionIntro />
-     <SectionTime />
-     <SectionPartners />
-     <SectionFoot />
+    {/* <Box className="curvedSectionBlueTop paddedXl"  /> */}
+    <SectionIntro />
+    <SectionTime />
+    <SectionPartners />
+    <SectionFoot />
+     {/*
+
+
+      */}
        {/*
 
        */}
-    </main>
+    {/* </main> */}
     </Wrapper>
   )
 }

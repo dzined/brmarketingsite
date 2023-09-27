@@ -84,10 +84,32 @@ useEffect(() => {
 
 
   return (
-    <Box id="heroSection" class={styles.heroSection} sx={{position:'relative',  width: '100%',
-    height: '100%'}}>
-    <Stack  ref={boxRef} id="heroBox" className={styles.heroBox} spacing={3}>
-    <Typography variant="h2" ref={boxRefa} className={styles.heroTitle}>The new era<br />of PI Insurance<br />is here</Typography>
+    <Box id="heroSection" class={styles.heroSection}   sx={{
+      width: '100%',
+      height: '100%',
+      position: 'relative',
+      overflow: 'hidden',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      transition: 'opacity 1.5s ease'
+
+    }}>
+    <Stack  ref={boxRef} id="heroBox" className={styles.heroBox}  sx={{
+    position: 'absolute',
+    width: {xs:'80%',sm:100},
+    left: {xs:'10%',sm:100},
+    top: {xs:100,sm:200},
+    zIndex: 99,
+    opacity: 0,
+    transition: 'opacity 1.5s ease'
+  }}   spacing={3}>
+    <Typography variant="h2" ref={boxRefa} sx={{fontFamily: `'stolzl', sans-serif`,
+    fontWeight: 500,
+    fontSize: {xs:30,sm:50},
+    opacity: 0
+
+    }}>The new era<br />of PI Insurance<br />is here</Typography>
     <Typography variant="body1" ref={boxRefb} className={styles.heroSubtitle}>Welcome to a pioneering new <strong>PI insurance</strong> service created to protect <strong>forward-thinking financial intermediaries</strong></Typography>
     <Button href="/insurance" ref={boxRefc} className={styles.button}>How we&apos;re different</Button>
 

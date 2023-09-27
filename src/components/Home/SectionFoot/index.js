@@ -9,7 +9,7 @@ export default function SectionFoot() {
   const theme=useTheme()
   return (
     <Box sx={{background:theme.palette.primary.superLight}}>
-      <Stack alignItems="center" justifyContent="center" sx={{p:{xs:2,sm:8}}}>
+      <Stack alignItems="center" justifyContent="center" sx={{p:{xs:4,sm:8},pb:{xs:6,sm:8}}}>
         <Stats />
         <Box sx={{mb:5}} />
         <GradientButton text="Register your Interest" />

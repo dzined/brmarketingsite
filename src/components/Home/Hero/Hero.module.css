@@ -1,11 +1,11 @@
 .heroSection {
-  position: 'relative';
+  /* position: 'relative';
 
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 1.5s ease;
+  transition: opacity 1.5s ease; */
 
 }
 
@@ -32,14 +32,14 @@
 }
 
 .heroBox {
-
+  /*
   position: absolute;
   width: 450px;
   left: 100px;
   top: 200px;
   z-index: 99;
   opacity: 0;
-  transition: opacity 1.5s ease;
+  transition: opacity 1.5s ease; */
 }
 
 .heroTitle {

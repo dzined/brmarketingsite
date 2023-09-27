@@ -24,32 +24,36 @@ export default function SectionTime() {
   },[])
   return (
     <Box sx={{background:theme.palette.primary.navy,position:'relative'}}>
-            <RingsLeft />
+            {/* <RingsLeft /> */}
 
       <Box className="curvedSectionWhiteTop paddedXl" />
-    <Box className="" sx={{p:{xs:10,sm:40}}} >
+    <Box className="" sx={{p:{xs:5,sm:10}}} >
 
       <Box sx={{px:{xs:0,sm:7}}}>
-    <Stack sx={{width:'100%',height:150}} />
+    <Stack sx={{width:'100%',height:{xs:50,sm:100,md:100}}} />
+
+
       {/* Good Practice */}
-      <Unstable_Grid2 container spacing={5}>
+      <Unstable_Grid2 container spacing={5} >
 
-        <Unstable_Grid2 xs={12} sm={6} alignItems={'center'} display="flex">
-        <Stack direction="column" alignItems="flex-start" justifyContent="flex-start" >
-        <Typography variant="body1"  className="gradientText " sx={{letterSpacing:1}}>it&apos;s time</Typography>
+        <Unstable_Grid2   id="sectionTime1" xs={12} sm={6} alignItems={'center'} display="flex">
+          <Stack direction="column" alignItems="flex-start" justifyContent="flex-start" >
+          <Typography variant="body1"  className="gradientText " sx={{letterSpacing:1}}>it&apos;s time</Typography>
 
-          <Typography variant="body1"sx={{lineHeight:1.2,fontSize:{xs:40,sm:35},fontWeight:200}} >your premium is based on <strong style={{fontWeight:500}}>your company&apos;s good practice</strong>, not industry averages</Typography>
-          <Typography  id="itsTime"  variant="body1"sx={{fontSize:12,mt:4}} > your premium is based on We&apos;ve created a new rating model that&apos;s better suited to top-tier businesses. It places more emphasis on your company&apos;s processes and less on what the rest of the market&apos;s doing, meaning your premium more closely reflects the good work you do.</Typography>
+            <Typography variant="body1"sx={{lineHeight:1.2,fontSize:{xs:30,sm:35},fontWeight:200}} >your premium is based on <strong style={{fontWeight:500}}>your company&apos;s good practice</strong>, not industry averages</Typography>
+            <Typography  id="itsTime"  variant="body1"sx={{fontSize:12,mt:4}} > your premium is based on We&apos;ve created a new rating model that&apos;s better suited to top-tier businesses. It places more emphasis on your company&apos;s processes and less on what the rest of the market&apos;s doing, meaning your premium more closely reflects the good work you do.</Typography>
 
-        </Stack>
+          </Stack>
         </Unstable_Grid2>
         <Unstable_Grid2  spacing={5} xs={12} sm={6} alignItems={'center'} display="flex">
-        <RatingModel />
+          <RatingModel />
         </Unstable_Grid2>
       </Unstable_Grid2>
-      <Stack sx={{width:'100%',height:250}} />
+      <Stack sx={{width:'100%',height:{xs:50,sm:100,md:250}}} />
+
+
       {/* Online Form */}
-      <Unstable_Grid2 container  id="sectionTime">
+      <Unstable_Grid2 container  id="sectionTime2">
       <Unstable_Grid2  spacing={5} xs={12} sm={6} alignItems={'center'} display="flex">
       <Laptop />
         </Unstable_Grid2 >
@@ -57,15 +61,15 @@ export default function SectionTime() {
           <Stack direction="column" alignItems="flex-start" justifyContent="flex-start" >
 
             <Typography variant="body1" className="gradientText" sx={{letterSpacing:1}}>it&apos;s time</Typography>
-            <Typography variant="body1" sx={{lineHeight:1.2,fontSize:{xs:40,sm:35},fontWeight:200}}  >For the PI insurance application & renewal process to  <strong style={{fontWeight:500}}>feel easier</strong></Typography>
+            <Typography variant="body1" sx={{lineHeight:1.2,fontSize:{xs:30,sm:35},fontWeight:200}}  >For the PI insurance application & renewal process to  <strong style={{fontWeight:500}}>feel easier</strong></Typography>
             <Typography variant="body1"sx={{fontSize:12,mt:4}} >A revolutionary insurance product calls for a revolutionary application process. We’ve developed an entirely new application form so you can apply for and manage your policy online. Gone are the days of supplying numerous supporting documents to help give context to your business activities, our behaviourally designed online application asks you the right questions while feeling easy to complete.</Typography>
           </Stack>
         </Unstable_Grid2>
       </Unstable_Grid2>
-      <Stack sx={{width:'100%',height:150}} />
+      <Stack sx={{width:'100%',height:{xs:50,sm:100,md:250}}} />
 
       {/* Safeguarded */}
-      <Unstable_Grid2 container id="sectionProtect">
+      <Unstable_Grid2 container id="sectionTime3">
       <Unstable_Grid2  spacing={5} xs={12} sm={6} alignItems={'center'} display="flex">
 
         <Stack direction="column" alignItems="flex-start" justifyContent="flex-start" >
@@ -75,14 +79,14 @@ export default function SectionTime() {
         </Stack>
         </Unstable_Grid2>
         <Unstable_Grid2  spacing={5} xs={12} sm={6} alignItems={'center'} display="flex">
-          <Box sx={{pl:6,pt:4}}>
+          <Box sx={{pl:{xs:0,sm:6},pt:4}}>
           <PetriDish />
           </Box>
 {/* <PracticeBox /> */}
         {/* <Box component="img" src="/time-3.png" sx={{width:'100%',maxWidth:400}} alt="Good Practice" /> */}
         </Unstable_Grid2>
       </Unstable_Grid2>
-      <Stack sx={{width:'100%',height:150}} />
+      <Stack sx={{width:'100%',height:{xs:50,sm:100,md:250}}} />
     </Box>
     </Box>
     </Box>

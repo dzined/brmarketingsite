@@ -19,7 +19,7 @@ export default function Stats() {
 
   return (
     <Box id="sectionStats">
-      <Grid container spacing={6}>
+      <Grid container spacing={{xs:4,sm:6}}>
         <Grid item xs={12} sm={6} md={6} justifyContent={'center'} alignItems={'center'}>
         <Box className="statBox" sx={{height:'100%'}}>
          <WhiteBox>
