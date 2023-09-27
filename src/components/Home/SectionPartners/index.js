@@ -45,7 +45,6 @@ const GreyBox=({children})=> {
   return (
     <Box id="partnerSection" sx={{position:'relative'}} className="whiteBg" >
       <Rings />
-      <Box className="curvedSectionWhiteReverse" />
 
         <Box sx={{p:{xs:5,sm:10}}}>
         <Box sx={{width:'100%',px:{xs:0,sm:6}}}>

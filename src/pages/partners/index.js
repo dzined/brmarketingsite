@@ -167,15 +167,15 @@ Money Alive’s products are used by financial advisers, pension schemes, pensio
   const theme=useTheme();
   return (
     <GeneralWrapper>
-      <Box sx={{height:80,width:'100%'}}></Box>
+      {/* <Box sx={{height:80,width:'100%'}}></Box> */}
     <RingsLeft />
     <Box >
-      <Stack  alignItems={"center"} sx={{py:8,width:'100%',backgroundColor:theme.palette.primary.superLight, }} >
-        <Box className="whiteBox" sx={{background:'#FFF',p:4,borderRadius:5,maxWidth:'80%',mt:4,boxShadow:'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;'}}>
+      <Stack  alignItems={"center"} sx={{py:{xs:3,sm:8},width:'100%',backgroundColor:theme.palette.primary.superLight, }} >
+        <Box className="whiteBox" sx={{background:'#FFF',p:{xs:0,sm:4},borderRadius:5,maxWidth:'80%',mt:4,boxShadow:'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;'}}>
      {/* <RingsLeft /> */}
 
-        <Box sx={{p:8}}>
-          <Typography className="partners gradientText" sx={{fontWeight:500,fontSize:40,color:'#000'}}>How our partners help</Typography>
+        <Box sx={{p:{xs:3,sm:8}}}>
+          <Typography className="partners gradientText" sx={{mb:2,fontWeight:500,fontSize:{xs:30,sm:40},lineHeight:{xs:1.2,sm:1.3},color:'#000'}}>How our partners help</Typography>
           <Typography className="partners" variant="body1" gutterBottom sx={{color:'#000',fontSize:14}}>
           We’ve partnered with five best-in-class adviser tools that share our mission to support advisers with the best resources to deliver good client outcomes. We hand-picked each of our partners as having a positive de-risking impact on PII and firms that use these tools will score favourably in our premium rating process. </Typography>
           <Typography className="partners" variant="body1" sx={{color:'#000',fontSize:14}}> Interested in learning more about how our partners can help your business? Read more below:

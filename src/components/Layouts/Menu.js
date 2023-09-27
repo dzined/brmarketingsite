@@ -1,89 +1,85 @@
-import React,{useState,useEffect,useRef} from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
-import Bars from '@/icons/Bars';
-import {  Stack } from '@mui/material';
-import Link from 'next/link';
-import Cross from '@/icons/Cross';
-import { animate } from 'motion';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+import Fade from '@mui/material/Fade';
+import Bars from "@/icons/Bars";
+import Cross from "@/icons/Cross";
+import { Stack } from "@mui/material";
+import Link from "next/link";
+import {animate,inView,stagger,spring} from 'motion'
 const style = {
-  position: 'absolute',
-  top: '100px',
-  left: '0%',
-  width:'100%',
-  height:'100vh',
-  // transform: 'translate(-50%, -50%)',
-zIndex:9999,
-  bgcolor: 'primary.navyDark',
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: '100%',
+  bgcolor: "primary.navyDark",
+  boxShadow: 5,
+  p: 5,
+height:'100%'
 
-  boxShadow: 24,
-  p: 4,
-opacity:1
 };
 
-export default function Menu() {
-
-  const handleClick = () => {
-    animate('#refModal', {opacity: [0, 1],top:['100vh',0]}, {duration: 1});
+export default function App() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () =>{
+    setOpen(true);
+    setTimeout(() => {
+      animate (
+        '.menuLink',
+        { opacity: [0,1], y: [-20,0]},
+        { delay: stagger(0.10) },
+        {duration:2,easing: spring()}
+      )
+    }, 300);
   }
   const handleClose = () => {
-      animate('#refModal', {opacity: [1,0],top:[0,'100vh']}, {duration: 1});
-    }
+
+
+    animate (
+      '.menuLink',
+      { opacity: [1,0], y: [0,-20]},
+      { delay: stagger(0.10) },
+      {duration:2,easing: spring()}
+    )
+    setTimeout(() => {
+      setOpen(false);
+    }, 600);
+  }
 
 
   return (
-<div>
-      <Box  sx={{
+    <div>
+ <Box  sx={{
         transition:'all 0.3s ease-in-out',
         '&:hover':{opacity:0.4},cursor:'pointer'}}
-        onClick={handleClick}><Bars  /></Box>
-      {/* {isVisible && */}
-        {/* <div ref={modal}
-          className="fadeInEl"
+        onClick={handleOpen}><Bars  /></Box>      <Modal open={open} onClose={handleClose}>
+        <Fade in={open}>
+          <Box sx={style}>
+          <Cross onClick={handleClose} sx={{position:'absolute',top:18,right:18,fontSize:25}} />
 
-        > */}
-      {/* <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      > */}
-        <Box id="refModal" sx={{
-  position: 'absolute',
-  top: '100px',
-  left: '0%',
-  width:'100%',
-  height:'100vh',
-  // transform: 'translate(-50%, -50%)',
-zIndex:9999,
-  bgcolor: 'primary.navyDark',
+              <Stack direction="column" id="menuCase" spacing={2} alignItems="center" justifyContent="center" sx={{height:'100%'}}>
+                <Link href="/" onClick={handleClose} className="menuLink" style={{opacity:0}}>
+                  <Typography sx={{fontWeight:200,transition:'all 0.3s','&:hover':{opacity:0.6,transform:'scale(1.05)'}}}>Home</Typography>
+                  </Link>
 
-  boxShadow: 24,
-  p: 4,
-opacity:0
-}}>
-            <Cross onClick={handleClose} sx={{position:'absolute',top:20,right:20,fontSize:50}} />
-            <Stack direction="column" spacing={2} alignItems="center" justifyContent="center" sx={{height:'100%'}}>
-                <Link href="/" onClick={handleClose}>
-                  <Typography sx={{fontWeight:200}}>Home</Typography>
+                  {/* <Link href="/insurance" onClick={handleClose} className="menuLink" style={{opacity:0}}>
+                  <Typography sx={{fontWeight:200,transition:'all 0.3s','&:hover':{opacity:0.6,transform:'scale(1.05)'}}}>Insurance</Typography>
                   </Link>
-                  <Link href="/insurance" onClick={handleClose}>
-                  <Typography sx={{fontWeight:200}}>Insurance</Typography>
-                  </Link>
-                  <Link href="/" onClick={handleClose}>
-                  <Typography sx={{fontWeight:200}}>Risk Management</Typography>
-</Link>
-<Link href="/" onClick={handleClose}>
-                  <Typography sx={{fontWeight:200}}>Our Partners</Typography>
+                  <Link href="/" onClick={handleClose} className="menuLink" style={{opacity:0}}>
+                  <Typography sx={{fontWeight:200,transition:'all 0.3s','&:hover':{opacity:0.6,transform:'scale(1.05)'}}}>Risk Management</Typography>
+</Link> */}
+<Link href="/partners" onClick={handleClose} className="menuLink" style={{opacity:0}}>
+                  <Typography sx={{fontWeight:200,transition:'all 0.3s','&:hover':{opacity:0.6,transform:'scale(1.05)'}}}>Our Partners</Typography>
                 </Link>
+                <Link href="/" onClick={handleClose} className="menuLink" style={{opacity:0}}>
+                  <Typography sx={{fontWeight:200,transition:'all 0.3s','&:hover':{opacity:0.6,transform:'scale(1.05)'}}}>Register your interest</Typography>
+                  </Link>
             </Stack>
-        </Box>
-      {/* </Modal> */}
-      {/* </div> */}
-      {/* } */}
-
+          </Box>
+        </Fade>
+      </Modal>
     </div>
   );
 }

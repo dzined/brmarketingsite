@@ -1,13 +1,16 @@
 import React,{useRef,useEffect} from 'react'
 import styles from './Hero.module.css'
-import { Button, Typography,Box, Stack } from '@mui/material'
+import { Button, Typography,Box, Stack,useTheme,useMediaQuery } from '@mui/material'
 import { gsap } from 'gsap';
 import Particles from "react-tsparticles";
 import Anime from '../Anime';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
 
-export default function Hero() {
-
-
+export default function Hero({clickRef}) {
+const theme = useTheme();
+const isMobile = useMediaQuery(useTheme().breakpoints.down('sm'));
   const parallaxElements = useRef([]);
 
 const boxRef =useRef(null)
@@ -81,7 +84,12 @@ useEffect(() => {
       window.removeEventListener('scroll', handleScroll);
     }
   }, []);
-
+  const handleGoToRef = () => {
+    window.scrollTo({
+      top: clickRef.current.offsetTop,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <Box id="heroSection" class={styles.heroSection}   sx={{
@@ -97,9 +105,9 @@ useEffect(() => {
     }}>
     <Stack  ref={boxRef} id="heroBox" className={styles.heroBox}  sx={{
     position: 'absolute',
-    width: {xs:'80%',sm:100},
+    width: {xs:'80%',sm:400},
     left: {xs:'10%',sm:100},
-    top: {xs:100,sm:200},
+    top: {xs:100,sm:150},
     zIndex: 99,
     opacity: 0,
     transition: 'opacity 1.5s ease'
@@ -111,7 +119,7 @@ useEffect(() => {
 
     }}>The new era<br />of PI Insurance<br />is here</Typography>
     <Typography variant="body1" ref={boxRefb} className={styles.heroSubtitle}>Welcome to a pioneering new <strong>PI insurance</strong> service created to protect <strong>forward-thinking financial intermediaries</strong></Typography>
-    <Button href="/insurance" ref={boxRefc} className={styles.button}>How we&apos;re different</Button>
+    <Button onClick={handleGoToRef} ref={boxRefc} className={styles.button}>How we&apos;re different</Button>
 
     </Stack>
       <img ref={el => parallaxElements.current[6] = el} src="mountain-6.svg" class={`${styles.parrallax} ${styles.mountain6}`}  />

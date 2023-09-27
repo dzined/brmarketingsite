@@ -1,0 +1,58 @@
+{
+  "showCookieTrigger": false,
+  "contactNumber": "0203 984 7340",
+  "contactEmail": "info@barerock.group",
+  "privacyPolicyUrl": "https://www.bare-rock.com/privacy-policy",
+  "cookiePolicyUrl": "https://www.bare-rock.com/cookie-policy",
+  "buttons": {
+    "acceptAll": {
+      "label": "Accept All"
+    },
+    "savePrefs": {
+      "label": "Save my preferences"
+    },
+    "declineAll": {
+      "label": "Decline All"
+    },
+    "acceptCookies": {
+      "label": "Accept Cookies"
+    },
+    "declineCookie": {
+      "label": "Decline Cookies"
+    }
+  },
+  "cookies": {
+    "essential": {
+      "label": "Essential Cookies",
+      "description": "These cookies are essential for the website to function properly.",
+      "cookies": [
+        {
+          "name": "cookieChoice",
+          "description": "This cookie tells us whether you have accepted the cookie policy.",
+          "duration": 424000
+        },
+        {
+          "name": "cookieOptions",
+          "description": "This cookie stores your chosen cookie preferences.",
+          "duration": 424000
+        }
+      ]
+    },
+    "analytics": {
+      "label": "Analytics Cookies",
+      "description": "These cookies are used to collect information about how visitors use our website. We use the information to compile reports and to help us improve the website. The cookies collect information in an anonymous form, including the number of visitors to the website and blog, where visitors have come to the website from and the pages they visited.",
+      "cookies": [
+        {
+          "name": "ga",
+          "description": "This cookie is used to distinguish unique users by assigning a randomly generated number as a client identifier. It is typically set to expire after two years but may vary based on the website's settings.",
+          "duration": 424000
+        },
+        {
+          "name": "gid",
+          "description": "This cookie is used to distinguish users and has a shorter expiration time compared to the _ga cookie. It is typically set to expire after 24 hours.",
+          "duration": 424000
+        }
+      ]
+    }
+  }
+}

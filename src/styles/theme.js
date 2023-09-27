@@ -54,7 +54,7 @@ let theme = createTheme({
 			superLightBlue: '#ecf4fc',
 			ultraLight: '#fafafa',
 			superDark: '#022443',
-			text: 'rgba(0, 0, 0, 0.7)',
+			text: 'rgba(0, 0, 0, 0.6)',
 			textLight: 'rgba(0, 0, 0, 0.4)'
 		},
 		summer: {
@@ -169,7 +169,7 @@ let theme = createTheme({
 		body1: {
 			fontWeight: 300,
 			'& strong': {
-				fontWeight: 600
+				fontWeight: 500
 			},
 			'& p': {
 				fontSize: '17px',

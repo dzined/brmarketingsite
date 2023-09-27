@@ -7,6 +7,7 @@ import header from './StyledModal.module.css'
 import { useTheme,Typography } from '@mui/material';
 import Cross from '@/icons/Cross';
 
+import Fade from '@mui/material/Fade';
 
 
 export default function StyledModal() {
@@ -48,7 +49,7 @@ export default function StyledModal() {
         onClose={handleClose}
         aria-labelledby="parent-modal-title"
         aria-describedby="parent-modal-description"
-      >
+      ><Fade in={open}>
         <Box sx={{ ...style,maxWidth:500,p:8,py:4 }}>
         <Cross sx={{position:'absolute',color:'#FFF',top:20,right:20}} onClick={handleClose} />
             <Typography variant="h3" sx={{color:'#FFF',mb:4,mt:0}}>Register your interest</Typography>
@@ -58,6 +59,7 @@ export default function StyledModal() {
             </Typography>
             <RegisterForm />
         </Box>
+        </Fade>
       </Modal>
     </div>
   );

@@ -1,24 +1,11 @@
 import React,{useState,useEffect} from 'react';
-import { Container } from '@mui/material';
-import Lottie from 'react-lottie';
-import animationData from '../components/Old/loader1.json';
 import FadeIn from 'react-fade-in/lib/FadeIn';
-import ProductHeroLogo from '../components/Old/ProductHeroLogo'
+import ProductHeroLogoFt from '../components/Old/ProductHeroLogoFt'
 import MainLayout from '../components/Old/MainLayout';
-import HeaderLogo from '../components/Old/HeaderLogo';
-const defaultOptions = {
-	loop: true,
-	autoplay: true,
-	animationData: animationData,
-	rendererSettings: {
-		preserveAspectRatio: "xMidYMid slice"
-	}
-};
 
 
 function Home() {
 
-	const [ done, setDone ] = useState(false);
 
 
 
@@ -61,7 +48,7 @@ function Home() {
 					</>
 				) : ( */}
 					<FadeIn transitionDuration="500">
-						<ProductHeroLogo />
+						<ProductHeroLogoFt />
 						{/* <HeaderLogo themeColor={themeColor} /> */}
 					</FadeIn>
 				{/* )}

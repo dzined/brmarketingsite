@@ -27,9 +27,11 @@ export default function Header({opacity=1}) {
   return (
 <>
 {isMobile ? <>
-  <Box sx={{position:'fixed',top:0,left:0,zIndex:999,p:2,width:'100%',
+  <Box sx={{position:'fixed',top:0,left:0,zIndex:999,width:'100%',
 background:theme.palette.primary.navy,
+
 }}>
+  <Box sx={{p:2}}>
     <Grid container spacing={2} alignItems="center">
       <Grid item xs={6}>
       <Link href="/">
@@ -41,8 +43,8 @@ background:theme.palette.primary.navy,
       </Grid>
 
       </Grid>
-
-
+      </Box>
+      <Box className="animateStrip" />
   </Box>
   <Box sx={{height:64}}></Box>
 </> :<>
