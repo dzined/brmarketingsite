@@ -84,15 +84,13 @@ useEffect(() => {
 
 
   return (
-    <Box id="heroSection" class={styles.heroSection}>
+    <Box id="heroSection" class={styles.heroSection} sx={{position:'relative',  width: '100%',
+    height: '100%'}}>
     <Stack  ref={boxRef} id="heroBox" className={styles.heroBox} spacing={3}>
     <Typography variant="h2" ref={boxRefa} className={styles.heroTitle}>The new era<br />of PI Insurance<br />is here</Typography>
     <Typography variant="body1" ref={boxRefb} className={styles.heroSubtitle}>Welcome to a pioneering new <strong>PI insurance</strong> service created to protect <strong>forward-thinking financial intermediaries</strong></Typography>
-    <Button ref={boxRefc} className={styles.button}>How we&apos;re different</Button>
-    {/* <Box>
-      <Typography>Developed in partnership with:</Typography>
-      <img src="arch-insurance-white.svg" alt="arch-insurance-white" style={{width:'100%',maxWidth:300}} />
-    </Box> */}
+    <Button href="/insurance" ref={boxRefc} className={styles.button}>How we&apos;re different</Button>
+
     </Stack>
       <img ref={el => parallaxElements.current[6] = el} src="mountain-6.svg" class={`${styles.parrallax} ${styles.mountain6}`}  />
       <img ref={el => parallaxElements.current[5] = el} src="mountain-5.svg" alt="mountains1" class={`${styles.parrallax} ${styles.mountain5}`} />
@@ -107,9 +105,12 @@ useEffect(() => {
       <img src="night.png"  alt="night" class={styles.night} />
       </Box>
     <Box className={styles.sunHolder}>
-      <Box className={styles.lensCenter}></Box>
-      </Box>
-      <img src="background.svg"  alt="mountains1" class={styles.parrallaxBg} />
+    <Box className={styles.lensCenter}></Box>
     </Box>
+    <img src="background.svg"  alt="mountains1" class={styles.parrallaxBg} />
+
+
+    </Box>
+
   )
 }

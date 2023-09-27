@@ -11,10 +11,21 @@ import IntroSection from '@/components/Home/IntroSection'
 import Footer from '@/components/Layouts/Footer'
 import Wrapper from '@/components/Layouts/Wrapper'
 import MessagingAnim from '@/components/Home/MessageAnim'
+import SectionIntro from '@/components/Home/SectionIntro'
+import SectionPartners from '@/components/Home/SectionPartners'
+import SectionTime from '@/components/Home/SectionTime'
+import SectionFoot from '@/components/Home/SectionFoot'
+import SectionPin from '@/components/Home/SectionPin'
+import React,{useEffect, useRef} from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+//   const [heroHeight,setHeight] = React.useState(0)
+//   const heroRef = React.useRef(null)
+//  useEffect(() => {
+//   setHeight(heroRef.current.clientHeight)
+//  },[])
   return (
     <Wrapper>
       <Head>
@@ -25,11 +36,24 @@ export default function Home() {
       </Head>
 
     <main>
-      <Hero />
-      <MessagingAnim />
-      <IntroSection />
 
+      <Box sx={{maxHeight:600,backgroundColor:'red',overflow:'hidden'}}>
+      {/* <Box ref={heroRef}> */}
+      <Hero  />
+      {/* </Box> */}
 
+      </Box>
+      {/* <SectionPin  heroHeight={heroHeight} /> */}
+      {/* <MessagingAnim />
+       */}
+    <Box className="curvedSectionBlueTop paddedXl"  />
+     <SectionIntro />
+     <SectionTime />
+     <SectionPartners />
+     <SectionFoot />
+       {/*
+
+       */}
     </main>
     </Wrapper>
   )

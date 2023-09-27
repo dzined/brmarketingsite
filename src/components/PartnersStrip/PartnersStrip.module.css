@@ -1,0 +1,28 @@
+.clearButton {
+  border: 2px solid #FFF;
+  border-radius: 40px;
+  color: #FFF;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px 20px;
+  max-width: 350px;
+}
+
+.partnership {
+  font-size: 16px;
+  font-weight: 400;
+  color: #FFF;
+  text-align: center;
+}
+
+.partners {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.partners img {
+  width: 100%;
+  max-width: 150px;
+}

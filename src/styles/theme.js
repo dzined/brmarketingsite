@@ -37,6 +37,7 @@ let theme = createTheme({
 		primary: {
 			icon:'#00a99d',
 			main: '#00567b',
+		navy:'#1b1b33',
 			mainHover: '#054561',
 			divider: '#8da8b4',
 			field: '#8da8b4',
@@ -48,7 +49,7 @@ let theme = createTheme({
 			contrastText: '#fff',
 			superLightText: 'rgba(0,86,123,0.12)',
 			medium: '#b8b9c3',
-			superLight: '#f3f5f6',
+			superLight: '#F3F5F8',
 			superLightBlue: '#ecf4fc',
 			ultraLight: '#fafafa',
 			superDark: '#022443',
@@ -160,12 +161,12 @@ let theme = createTheme({
 		lineHeight: '1.2rem',
 		textRendering: 'optimizeLegibility',
 		fontSmooth: 'auto',
-		fontWeight: '400',
+		fontWeight: 300,
 		paragraph:{
 			marginBottom: 0
 		},
 		body1: {
-			fontWeight: '400',
+			fontWeight: 300,
 			'& strong': {
 				fontWeight: 600
 			},
@@ -508,7 +509,7 @@ MuiPickersCalendarHeader:{
 				}
 			}
 		},
-		// MuiAutocomplet': {
+		// MuiAutocomplete': {
 		// 			zIndex: 9999999
 		// 		},
 		MuiRadio: {

@@ -2,7 +2,7 @@ import React,{useEffect,useRef} from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import { Box } from '@mui/material'
-import Circle from '@/assets/icons/Circle'
+import Circle from '@/icons/Circle'
 import styles from './GeneralWrapper.module.css'
 export default function GeneralWrapper({children}) {
   const circleShape = useRef(null);
