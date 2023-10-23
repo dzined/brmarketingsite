@@ -57,7 +57,7 @@ export default function App() {
         onClick={handleOpen}><Bars  /></Box>      <Modal open={open} onClose={handleClose}>
         <Fade in={open}>
           <Box sx={style}>
-          <Cross onClick={handleClose} sx={{position:'absolute',top:18,right:18,fontSize:25}} />
+          <Cross onClick={handleClose} sx={{cursor:'pointer',position:'absolute',top:18,right:18,fontSize:25}} />
 
               <Stack direction="column" id="menuCase" spacing={2} alignItems="center" justifyContent="center" sx={{height:'100%'}}>
                 <Link href="/" onClick={handleClose} className="menuLink" style={{opacity:0}}>
