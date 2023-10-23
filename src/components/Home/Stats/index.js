@@ -23,7 +23,7 @@ export default function Stats() {
         <Grid item xs={12} sm={6} md={6} justifyContent={'center'} alignItems={'center'}>
         <Box className="statBox" sx={{height:'100%'}}>
          <WhiteBox>
-          <Typography variant="body1" className="gradientText" sx={{fontWeight:500,textAlign:'center'}}>1st policy to accommodation FCA DISP 5.1</Typography>
+          <Typography variant="body1" className="gradientText" sx={{fontWeight:500,textAlign:'center'}}>1st policy to accommodation FCA DISP 1.5.1</Typography>
           <Typography variant="h2" className="gradientText" sx={{mt:1,textAlign:'center'}}>3 day rule</Typography>
           </WhiteBox>
           </Box>
